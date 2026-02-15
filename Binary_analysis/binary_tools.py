@@ -312,7 +312,7 @@ def binary_ephem(current_date, t0, T, smaj, ecc, inc, small_om, big_om, t0_err,
         # Time spent after passing periastron
         date_sub = np.mod((current_date-t0_samp), T_samp)
         # Solve equation to find the actual time locating
-        # the position of the companion
+        # the position of the companionƒ
         x = sp.symbols('x', real=True)
         eq = sp.Eq(4*sp.pi*x-ecc_samp*sp.sin(4*sp.pi*x),
                    2*sp.pi/T_samp*date_sub)
